@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Sign Up
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <ion-content class="ion-padding">
+    <div>
+      <ion-text color="primary" class="ion-text-center">
+       <h1>Crear Cuenta</h1>
+      </ion-text>
+      </div>
+
+      <form #formulario="ngForm" (ngSubmit)="crearCuenta()">
+        <ion-list>
+          <ion-item>
+         
+            <ion-input labelPlacement="floating" label="Nombre de Usuario" required type="text"
+            [(ngModel)]="usuario.username" name="usr"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            
+            <ion-input label="Contraseña" labelPlacement="floating" required type="text" name="pass"
+            [(ngModel)]="usuario.password" 
+            ></ion-input>
+          </ion-item>
+        </ion-list>
+        
+        <ion-button color="success" type="submit" [disabled]="formulario.invalid" expand="full">
+          Crear cuenta
+        </ion-button>
+      </form>
+
+  
+  </ion-content>

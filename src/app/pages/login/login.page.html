@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <ion-content class="ion-padding">
+    <div>
+      <ion-text color="primary" class="ion-text-center">
+       <h1>Inicio de Sesión</h1>
+      </ion-text>
+      </div>
+
+      <form #formulario="ngForm" (ngSubmit)="iniciar()">
+        <ion-list>
+          <ion-item>
+         
+            <ion-input labelPlacement="floating" label="Nombre de Usuario" required type="text"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            
+            <ion-input label="Contrraseña" labelPlacement="floating" required type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+        
+        <ion-button color="primary" type="submit" [disabled]="formulario.invalid" expand="full">
+          Login
+        </ion-button>
+      </form>
+
+      <ion-text color="secondary" class="ion-text-center">
+        <h6 routerLink="/crearcuenta">Crear una cuenta</h6>
+      </ion-text>
+  </ion-content>
